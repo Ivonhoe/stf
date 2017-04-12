@@ -41,6 +41,9 @@ module.exports = {
         , stats: 'stats.js/src/Stats.js'
         , 'underscore.string': 'underscore.string/index'
       }
+    },
+    node: {
+      fs: 'empty',
     }
     , module: {
       loaders: [

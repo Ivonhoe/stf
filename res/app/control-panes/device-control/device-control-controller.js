@@ -5,6 +5,16 @@ module.exports = function DeviceControlCtrl($scope, DeviceService, GroupService,
 
   $scope.showScreen = true
 
+  $scope.recordScreen = false
+
+  $scope.installFile = function($files) {
+    if ($files.length) {
+      console.log("-----"+$files)
+
+      $scope.control.installFile($files)
+    }
+  }
+
   $scope.groupTracker = DeviceService.trackGroup($scope)
 
   $scope.groupDevices = $scope.groupTracker.devices
